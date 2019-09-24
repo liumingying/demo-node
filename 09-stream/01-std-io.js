@@ -1,7 +1,7 @@
 #!usr/bin/node
 
-const stdin = process.stdin;
-      stdout = process.stdout;
+const stdin = process.stdin,
+  stdout = process.stdout;
 
 stdin.resume();
 

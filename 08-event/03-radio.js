@@ -1,30 +1,25 @@
-#!usr/bin/node
+#!/usr/bin/node
 
-const EventEmitter = require('events').EventEmitter ,
-      util        = require('util');
-function Radio(station){
-  var _listeners  ={
-    'play':[fn1,]
-  }
-  
-  },0);
-  setTimeout(()=>{
-    emit('stop',station);
-  },5000);
+const EventEmitter = require('events').EventEmitter,
+  util         = require('util');
 
-function emit(evt,arg){
-  if(typeof(_listeners[evt])=== 'undefined'){
-    console.error('Error :%s not defined',evt);
-    process.exit(1);
-  }
-  _listeners[evt].forEach((fn)=>{
-    fn.call(this,arg);
-  });
+function Radio(station) {
+  EventEmitter.call(this);
 
+  var self = this;
 
-}
-  
-this.on = (evt,fn)=>{
+  setTimeout(() => {
+    self.emit('open', station);
+              
+  }, 0);
+
+  setTimeout(() => {
+    self.emit('stop', station);
+              
+  }, 5000);
 
 }
 
+util.inherits(Radio, EventEmitter);
+
+module.exports = Radio;

@@ -1,21 +1,22 @@
-#!usr/bin/node
+#!/usr/bin/node
 
-const Radio = require('./03-radio'),
-      log = console.log;
+const Radio   = require('./04-radio.js'),
+  station = {
+    'freq': '106.7',
+    'name': 'music Radio'
+                                
+  };
 
-const station {
-  freq:'106.7',
-    name:'music radio'
-};
+var r = new Radio(station);
 
-var radio  = new Radio(station);
+r.on('play', (station) => {
+  console.log('FM %s %s is playing!', station.freq, station.name);
 
-radio.on('play ',(station)=>{
-  log('"%s" FM %s opended!',station.name,station.freq);
-  log('lalala...')
 });
 
-radio.on('stop',(station)=>{
-  log('"%s" FM %s closed!',station.name,station.freq)
+r.on('stop', (station) => {
+  console.log('FM %s %s is stop!', station.freq, station.name);
+
 });
+
 

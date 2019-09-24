@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 const fs = require('fs'),
-      file = process.argv[2] || __filename;
+  file = process.argv[2] || __filename;
 
 const fid =  fs.openSync(file,'r');
 

@@ -1,6 +1,8 @@
 #!/usr/bin/node
 
-const Read  = require('stream').Readable;
+const Read  = require('stream').Readable,
+  stdin=process.stdin,
+  stdout=process.stdout;
 
 var r = new Read();
 

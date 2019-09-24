@@ -5,19 +5,19 @@ const EventEmiter = require('event').EventEmitter;
 var e =  new EventEmiter();
 
 setInterval(function(){
-e.emit('hello');
+  e.emit('hello');
 
 },1000);
 
-setTimeout(function(){
-  e.emit('bye')
+setTimeout(()=>{
+  e.emit('bye');
 },5000);
 
-e.on('hello',function(){
+e.on('hello',()=>{
   console.log('hello event emit!');
 });
 
-e.on('bye',function(){
+e.on('bye',()=>{
   console.log('good bye');
 });
 

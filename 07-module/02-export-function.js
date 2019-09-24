@@ -1,18 +1,21 @@
 #!/usr/bin/node
 
-function circle (radius){
-  return Math.PI * radius *radius;
 
-function circumference(){
-  return 2*Math.PI * radius;
-}
+const pi = Math.PI;
 
-return {
-  area:area,
-  circumference:circumference
+module.exports = (radius) => {
+  function circumference() {
+    return pi * 2 * radius;
+  }
+  function area(){
+    return pi * 2 * radius;
+  }
 
-}
-}
+  return {
+    area:area,
+    circumference:circumference
+  };
+};
 
-console.dir(moudule);
+console.dir(module);
 

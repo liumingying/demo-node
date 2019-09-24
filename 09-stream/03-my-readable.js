@@ -6,10 +6,10 @@ function MyReadable(){
   Read.call(this);
 }
 var c = 'a'.charCodeAt(0);
-MyReadable.prototype._read = (){
+MyReadable.prototype._read =function(){
   this.push(String.formCarCode(c++));
   if(c>'z'.charCodeAt(0))this.push(null);
-}
+};
 
 
 MyReadable.prototype  =Read.prototype;

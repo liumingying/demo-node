@@ -1,13 +1,13 @@
 #!/usr/bin/node
 
 const fs  = require('fs'),
-        src = process.argv[2] || __filename;
+  src = process.argv[2] || __filename;
 
 try{
-    console.log(fs.statSync(src));
+  console.log(fs.statSync(src));
 
 } catch(err) {
-    console.error(err.message);
-      process.exit(1);
+  console.error(err.message);
+  process.exit(1);
 
 }

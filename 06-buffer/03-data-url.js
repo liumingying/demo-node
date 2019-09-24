@@ -32,5 +32,5 @@ var html = '<!DOCTYPE html><html><body><img alt="'
                 console.log(req.url + '\n');
                   res.end(html);
                   }).listen(8080);
-            })'"'
-'"'
+            });
+

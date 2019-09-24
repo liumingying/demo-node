@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
-const GreenStream = require('./04-green-stream');
-      stdin=process.stdin;
+const GreenStream = require('./04-green-stream'),
+  stdin=process.stdin;
 
 var g = new GreenStream();
 stdin.resume();
